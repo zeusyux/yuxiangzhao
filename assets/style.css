@@ -1,4 +1,4 @@
-/* 全局基础样式：统一缩小一号，选用更易读的字体组合 */
+/* 全局基础样式：统一选用更易读的字体组合 */
 body,
 td,
 th,
@@ -7,8 +7,8 @@ p,
 a {
   /* 主字体优化：Helvetica为基础，补充思源黑体适配中英文，提升美观度 */
   font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 12px; /* 原13px缩小一号，作为全局基准字号 */
-  line-height: 1.5; /* 优化行高，小字体更易读 */
+  font-size: 12px; /* 全局基准字号，与Biography正文保持一致 */
+  line-height: 1.5; /* 优化行高，提升可读性 */
 }
 
 /* 链接样式：保持品牌色，增加hover过渡效果更精致 */
@@ -28,51 +28,51 @@ a:hover {
 strong {
   /* Lato字体增强强调感，与主字体形成和谐搭配 */
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 12px; /* 原13px缩小一号 */
+  font-size: 12px; /* 与全局基准字号一致 */
   font-weight: 700; /* 明确加粗权重，突出效果 */
 }
 
 /* 弱强调文本：比基准小一号，层级更清晰 */
 strongless {
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 11px; /* 原12px缩小一号 */
+  font-size: 11px; /* 比基准小一号，保持层级差异 */
 }
 
 /* 列表项：匹配全局样式，优化间距避免拥挤 */
 li {
-  margin: 4px 0; /* 小字号下增加间距，提升可读性 */
-  font-size: 12px; /* 原13px缩小一号，与正文统一 */
+  margin: 4px 0; /* 增加间距，提升可读性 */
+  font-size: 12px; /* 与全局基准字号一致（Biography正文基于此） */
 }
 
-/* 高亮文本：保持背景色，适配小字体 */
+/* 高亮文本：保持背景色，适配基准字体 */
 span.highlight {
   background-color: #ffffd0;
   padding: 0 2px; /* 增加内边距，避免高亮区域过窄 */
 }
-/* 个人姓名高亮：强化突出，适配新字号 */
+/* 个人姓名高亮：强化突出，适配基准字号 */
 span.me {
   color: #000000;
   font-weight: 600;
-  font-size: 12px; /* 原13px缩小一号 */
+  font-size: 12px; /* 与全局基准字号一致 */
 }
 
-/* 出版物标题：缩小一号，保持视觉主导地位 */
+/* 出版物标题：保持视觉主导地位，适配整体风格 */
 div.title {
   color: #000000;
-  font-size: 14px; /* 原16px缩小一号 */
+  font-size: 14px; /* 比基准大二号，突出标题层级 */
   font-weight: 600;
-  margin-bottom: 3px; /* 适配小字号调整间距 */
+  margin-bottom: 3px; /* 优化间距 */
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif; /* 与强调文本字体统一 */
 }
-/* 会议信息：缩小一号，与正文协调 */
+/* 会议信息：与全局基准一致，协调正文风格 */
 div.conf {
-  font-size: 12px; /* 原13px缩小一号 */
+  font-size: 12px; /* 与全局基准字号一致 */
   color: #000000;
   margin-bottom: 3px;
 }
-/* 作者信息：缩小一号，灰度风格保持一致 */
+/* 作者信息：比基准小一号，灰度风格保持一致 */
 div.author {
-  font-size: 11px; /* 原12px缩小一号 */
+  font-size: 11px; /* 比基准小一号，区分辅助信息层级 */
   color: #777777;
   margin-bottom: 3px;
 }
@@ -86,28 +86,28 @@ div.author a:hover {
   color: #f09228;
   text-decoration: None;
 }
-/* 资料链接文本：缩小一号，匹配全局 */
+/* 资料链接文本：与全局基准一致，匹配正文 */
 div.material {
   color: #000000;
-  font-size: 12px; /* 原13px缩小一号 */
+  font-size: 12px; /* 与全局基准字号一致 */
   font-weight: 400;
 }
 
-/* 新闻日期：仅保留斜体特性，其余与辅助信息统一 */
+/* 新闻日期：调整为与辅助信息协调，不干扰正文层级 */
 .news-date {
-  /* 字体与辅助信息统一，避免风格割裂 */
   font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 11px; /* 原11px保持，与作者信息字号一致 */
-  color: #777777; /* 与作者信息颜色统一 */
-  font-style: italic; /* 唯一差异化特性：日期斜体 */
-  margin-right: 6px; /* 适配小字号调整间距 */
-  font-weight: 400; /* 取消加粗，与辅助信息风格统一 */
+  font-size: 12px; /* 关键修改：从11px改为12px，与Biography正文（全局基准）一致 */
+  color: #777777; /* 保持辅助信息灰度，区分日期与内容 */
+  font-style: italic; /* 保留斜体特性，维持日期辨识度 */
+  margin-right: 6px; /* 优化间距，提升阅读体验 */
+  font-weight: 400; /* 保持常规字重，避免视觉冲突 */
 }
 
-/* 新闻内容：完全匹配全局正文样式，无差异化 */
+/* 新闻内容：完全匹配全局正文（Biography）样式，无差异化 */
 .news-content {
   font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 12px; /* 原13px缩小一号，与正文完全统一 */
-  color: #000000; /* 与其他模块正文颜色一致 */
+  font-size: 12px; /* 与全局基准字号一致（Biography正文同此） */
+  color: #000000; /* 与Biography正文颜色完全统一 */
   font-weight: 400;
+  line-height: 1.5; /* 同步全局行高，确保阅读节奏一致 */
 }
