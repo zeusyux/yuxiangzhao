@@ -72,3 +72,17 @@ div.material {
   font-size: 15px;
   font-weight: 400;
 }
+/* 新闻日期样式类 */
+.news-date {
+  font-family: "Microsoft YaHei", Arial, sans-serif; /* 字体家族 */
+  font-size: 14pt; /* 字体大小（可与新闻内容区分） */
+  color: #333333; /* 字体颜色（比默认黑色稍浅，突出内容） */
+  font-weight: 600; /* 字体加粗（可选，增强视觉区分） */
+}
+
+/* 新闻内容样式（可选，统一内容字体） */
+.news-content {
+  font-family: "SimSun", Georgia, serif;
+  font-size: 13pt;
+  color: #555555;
+}
