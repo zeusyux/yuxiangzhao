@@ -1,3 +1,4 @@
+/* 全局基础样式：缩小基准字号，奠定整体简约基调 */
 body,
 td,
 th,
@@ -5,9 +6,10 @@ tr,
 p,
 a {
   font-family: Helvetica, Ariel, sans-serif;
-  font-size: 15px;
+  font-size: 13px; /* 基准字号从15px缩至13px，提升页面紧凑感 */
 }
 
+/* 链接样式：保持颜色体系，匹配新字号 */
 a,
 a:visited {
   color: #1772d0;
@@ -19,44 +21,53 @@ a:hover {
   text-decoration: none;
 }
 
+/* 强调文本：略小于基准，突出但不突兀 */
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 13px; /* 与基准一致，通过加粗实现强调效果 */
 }
 
+/* 弱强调文本：比基准小1px，明确层级 */
 strongless {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 12px; /* 从14px缩至12px，与基准形成细微区分 */
 }
 
+/* 列表项：匹配基准字号，优化间距 */
 li {
-  margin: 2px 0;
+  margin: 3px 0; /* 微调间距提升可读性 */
+  font-size: 13px; /* 统一列表与正文字号 */
 }
 
+/* 高亮文本：保持背景效果，适配新字号 */
 span.highlight {
   background-color: #ffffd0;
 }
+/* 个人姓名高亮：加粗突出，字号匹配基准 */
 span.me {
   color: #000000;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px; /* 从15px缩至13px，与正文协调 */
 }
 
+/* 出版物标题：缩小但保持视觉权重 */
 div.title {
   color: #000000;
-  font-size: 18px;
+  font-size: 16px; /* 从18px缩至16px，仍为模块内最大字号 */
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 4px; /* 微调间距适配小字号 */
 }
+/* 会议信息：匹配基准字号 */
 div.conf {
-  font-size: 15px;
+  font-size: 13px; /* 从15px缩至13px */
   color: #000000;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
+/* 作者信息：缩小并保持灰度风格 */
 div.author {
-  font-size: 15px;
+  font-size: 12px; /* 从15px缩至12px，与日期颜色呼应 */
   color: #777777;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 div.author a:link,
 div.author a:visited {
@@ -67,33 +78,26 @@ div.author a:hover {
   color: #f09228;
   text-decoration: None;
 }
+/* 资料链接文本：匹配基准字号 */
 div.material {
   color: #000000;
-  font-size: 15px;
+  font-size: 13px; /* 从15px缩至13px */
   font-weight: 400;
 }
-/* 新闻日期样式：更小更优雅，与整体风格统一 */
+
+/* 新闻日期：进一步优化层级，更精致 */
 .news-date {
-  /* 选用衬线字体提升质感，兼容无衬线字体确保显示 */
   font-family: Georgia, 'Lato', Helvetica, sans-serif;
-  /* 缩小字体至12px，与正文形成清晰层级 */
-  font-size: 12px;
-  /* 深灰色不抢焦点，与作者信息颜色呼应 */
+  font-size: 11px; /* 从12px缩至11px，与正文区分更清晰 */
   color: #777777;
-  /* 斜体增强设计感，保持学术页面优雅调性 */
   font-style: italic;
-  /* 与正文保持合适间距，提升可读性 */
-  margin-right: 10px;
-  /* 轻微加粗让日期更易识别但不突兀 */
+  margin-right: 8px;
   font-weight: 500;
 }
 
-/* 新闻内容样式：与页面正文完全统一 */
+/* 新闻内容：与全局基准统一 */
 .news-content {
-  /* 沿用全局字体，确保跨模块风格一致 */
   font-family: Helvetica, Ariel, sans-serif;
-  /* 匹配正文15px标准字号 */
-  font-size: 15px;
-  /* 正文标准黑色，与其他模块内容颜色统一 */
+  font-size: 13px; /* 从15px缩至13px */
   color: #000000;
 }
