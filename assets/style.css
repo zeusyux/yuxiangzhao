@@ -72,19 +72,28 @@ div.material {
   font-size: 15px;
   font-weight: 400;
 }
-/* 新闻日期样式类 */
+/* 新闻日期样式：更小更优雅，与整体风格统一 */
 .news-date {
-  font-family: Georgia, 'Times New Roman', Times, serif; /* 更具设计感的衬线字体 */
-  font-size: 11pt; /* 字体大小调小 */
-  color: #666666; /* 颜色调为深灰色，不突兀 */
-  font-style: italic; /* 设置为斜体，增加优雅感 */
-  margin-right: 8px; /* 与后面的文字保持一点距离 */
+  /* 选用衬线字体提升质感，兼容无衬线字体确保显示 */
+  font-family: Georgia, 'Lato', Helvetica, sans-serif;
+  /* 缩小字体至12px，与正文形成清晰层级 */
+  font-size: 12px;
+  /* 深灰色不抢焦点，与作者信息颜色呼应 */
+  color: #777777;
+  /* 斜体增强设计感，保持学术页面优雅调性 */
+  font-style: italic;
+  /* 与正文保持合适间距，提升可读性 */
+  margin-right: 10px;
+  /* 轻微加粗让日期更易识别但不突兀 */
+  font-weight: 500;
 }
 
-/* 新闻内容样式（可选，统一内容字体） */
+/* 新闻内容样式：与页面正文完全统一 */
 .news-content {
-  /* 你可以保留或调整这部分 */
-  font-family: "SimSun", Georgia, serif;
-  font-size: 13pt;
-  color: #333333; /* 正文颜色可以稍深一些，与日期形成对比 */
+  /* 沿用全局字体，确保跨模块风格一致 */
+  font-family: Helvetica, Ariel, sans-serif;
+  /* 匹配正文15px标准字号 */
+  font-size: 15px;
+  /* 正文标准黑色，与其他模块内容颜色统一 */
+  color: #000000;
 }
