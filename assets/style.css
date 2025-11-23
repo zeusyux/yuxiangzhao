@@ -1,19 +1,22 @@
-/* 全局基础样式：缩小基准字号，奠定整体简约基调 */
+/* 全局基础样式：统一缩小一号，选用更易读的字体组合 */
 body,
 td,
 th,
 tr,
 p,
 a {
-  font-family: Helvetica, Ariel, sans-serif;
-  font-size: 13px; /* 基准字号从15px缩至13px，提升页面紧凑感 */
+  /* 主字体优化：Helvetica为基础，补充思源黑体适配中英文，提升美观度 */
+  font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
+  font-size: 12px; /* 原13px缩小一号，作为全局基准字号 */
+  line-height: 1.5; /* 优化行高，小字体更易读 */
 }
 
-/* 链接样式：保持颜色体系，匹配新字号 */
+/* 链接样式：保持品牌色，增加hover过渡效果更精致 */
 a,
 a:visited {
   color: #1772d0;
   text-decoration: none;
+  transition: color 0.2s ease; /* 平滑颜色过渡 */
 }
 a:focus,
 a:hover {
@@ -21,83 +24,90 @@ a:hover {
   text-decoration: none;
 }
 
-/* 强调文本：略小于基准，突出但不突兀 */
+/* 强调文本：保持加粗属性，字号与基准统一 */
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 13px; /* 与基准一致，通过加粗实现强调效果 */
+  /* Lato字体增强强调感，与主字体形成和谐搭配 */
+  font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
+  font-size: 12px; /* 原13px缩小一号 */
+  font-weight: 700; /* 明确加粗权重，突出效果 */
 }
 
-/* 弱强调文本：比基准小1px，明确层级 */
+/* 弱强调文本：比基准小一号，层级更清晰 */
 strongless {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 12px; /* 从14px缩至12px，与基准形成细微区分 */
+  font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
+  font-size: 11px; /* 原12px缩小一号 */
 }
 
-/* 列表项：匹配基准字号，优化间距 */
+/* 列表项：匹配全局样式，优化间距避免拥挤 */
 li {
-  margin: 3px 0; /* 微调间距提升可读性 */
-  font-size: 13px; /* 统一列表与正文字号 */
+  margin: 4px 0; /* 小字号下增加间距，提升可读性 */
+  font-size: 12px; /* 原13px缩小一号，与正文统一 */
 }
 
-/* 高亮文本：保持背景效果，适配新字号 */
+/* 高亮文本：保持背景色，适配小字体 */
 span.highlight {
   background-color: #ffffd0;
+  padding: 0 2px; /* 增加内边距，避免高亮区域过窄 */
 }
-/* 个人姓名高亮：加粗突出，字号匹配基准 */
+/* 个人姓名高亮：强化突出，适配新字号 */
 span.me {
   color: #000000;
   font-weight: 600;
-  font-size: 13px; /* 从15px缩至13px，与正文协调 */
+  font-size: 12px; /* 原13px缩小一号 */
 }
 
-/* 出版物标题：缩小但保持视觉权重 */
+/* 出版物标题：缩小一号，保持视觉主导地位 */
 div.title {
   color: #000000;
-  font-size: 16px; /* 从18px缩至16px，仍为模块内最大字号 */
+  font-size: 14px; /* 原16px缩小一号 */
   font-weight: 600;
-  margin-bottom: 4px; /* 微调间距适配小字号 */
+  margin-bottom: 3px; /* 适配小字号调整间距 */
+  font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif; /* 与强调文本字体统一 */
 }
-/* 会议信息：匹配基准字号 */
+/* 会议信息：缩小一号，与正文协调 */
 div.conf {
-  font-size: 13px; /* 从15px缩至13px */
+  font-size: 12px; /* 原13px缩小一号 */
   color: #000000;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
-/* 作者信息：缩小并保持灰度风格 */
+/* 作者信息：缩小一号，灰度风格保持一致 */
 div.author {
-  font-size: 12px; /* 从15px缩至12px，与日期颜色呼应 */
+  font-size: 11px; /* 原12px缩小一号 */
   color: #777777;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 div.author a:link,
 div.author a:visited {
   color: #777777;
   text-decoration: None;
+  transition: color 0.2s ease;
 }
 div.author a:hover {
   color: #f09228;
   text-decoration: None;
 }
-/* 资料链接文本：匹配基准字号 */
+/* 资料链接文本：缩小一号，匹配全局 */
 div.material {
   color: #000000;
-  font-size: 13px; /* 从15px缩至13px */
+  font-size: 12px; /* 原13px缩小一号 */
   font-weight: 400;
 }
 
-/* 新闻日期：进一步优化层级，更精致 */
+/* 新闻日期：仅保留斜体特性，其余与辅助信息统一 */
 .news-date {
-  font-family: Georgia, 'Lato', Helvetica, sans-serif;
-  font-size: 11px; /* 从12px缩至11px，与正文区分更清晰 */
-  color: #777777;
-  font-style: italic;
-  margin-right: 8px;
-  font-weight: 500;
+  /* 字体与辅助信息统一，避免风格割裂 */
+  font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
+  font-size: 11px; /* 原11px保持，与作者信息字号一致 */
+  color: #777777; /* 与作者信息颜色统一 */
+  font-style: italic; /* 唯一差异化特性：日期斜体 */
+  margin-right: 6px; /* 适配小字号调整间距 */
+  font-weight: 400; /* 取消加粗，与辅助信息风格统一 */
 }
 
-/* 新闻内容：与全局基准统一 */
+/* 新闻内容：完全匹配全局正文样式，无差异化 */
 .news-content {
-  font-family: Helvetica, Ariel, sans-serif;
-  font-size: 13px; /* 从15px缩至13px */
-  color: #000000;
+  font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
+  font-size: 12px; /* 原13px缩小一号，与正文完全统一 */
+  color: #000000; /* 与其他模块正文颜色一致 */
+  font-weight: 400;
 }
