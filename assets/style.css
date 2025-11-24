@@ -169,11 +169,11 @@ name {
 
 .avatar-fixed {
   position: absolute;
-  top: 20px;     /* 根据需要调整 */
-  right: 140px;   /* 让头像贴到浏览器右边 */
+  top: 10px;     /* 根据需要调整 */
+  right: 440px;   /* 让头像贴到浏览器右边 */
 }
 
 .avatar-fixed img {
-  max-width: 120px;
+  max-width: 100px;
   border-radius: 6px;
 }
