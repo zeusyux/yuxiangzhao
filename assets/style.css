@@ -1,22 +1,21 @@
-/* 全局基础样式：统一选用更易读的字体组合 */
+/* --- 全局字体放大：基准字号从12px改为14px --- */
 body,
 td,
 th,
 tr,
 p,
 a {
-  /* 主字体优化：Helvetica为基础，补充思源黑体适配中英文，提升美观度 */
   font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 12px; /* 全局基准字号，与Biography正文保持一致 */
-  line-height: 1.5; /* 优化行高，提升可读性 */
+  font-size: 14px; /* 核心：全局基准字号放大 */
+  line-height: 1.6; /* 行高同步优化，提升可读性 */
 }
 
-/* 链接样式：保持品牌色，增加hover过渡效果更精致 */
+/* 链接样式：保持过渡效果 */
 a,
 a:visited {
   color: #1772d0;
   text-decoration: none;
-  transition: color 0.2s ease; /* 平滑颜色过渡 */
+  transition: color 0.2s ease;
 }
 a:focus,
 a:hover {
@@ -24,57 +23,55 @@ a:hover {
   text-decoration: none;
 }
 
-/* 强调文本：保持加粗属性，字号与基准统一 */
+/* 强调文本：字号同步放大 */
 strong {
-  /* Lato字体增强强调感，与主字体形成和谐搭配 */
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 12px; /* 与全局基准字号一致 */
-  font-weight: 700; /* 明确加粗权重，突出效果 */
+  font-size: 14px; /* 与基准字号一致 */
+  font-weight: 700;
 }
 
-/* 弱强调文本：比基准小一号，层级更清晰 */
+/* 弱强调文本：保持比基准小1px */
 strongless {
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 11px; /* 比基准小一号，保持层级差异 */
+  font-size: 13px; /* 比基准小1px，层级清晰 */
 }
 
-/* 列表项：匹配全局样式，优化间距避免拥挤 */
+/* 列表项：字号同步放大 */
 li {
-  margin: 4px 0; /* 增加间距，提升可读性 */
-  font-size: 12px; /* 与全局基准字号一致（Biography正文基于此） */
+  margin: 5px 0; /* 间距微调 */
+  font-size: 14px; /* 与基准一致 */
 }
 
-/* 高亮文本：保持背景色，适配基准字体 */
+/* 高亮文本：保持样式 */
 span.highlight {
   background-color: #ffffd0;
-  padding: 0 2px; /* 增加内边距，避免高亮区域过窄 */
+  padding: 0 3px;
 }
-/* 个人姓名高亮：强化突出，适配基准字号 */
 span.me {
   color: #000000;
   font-weight: 600;
-  font-size: 12px; /* 与全局基准字号一致 */
+  font-size: 14px; /* 同步放大 */
 }
 
-/* 出版物标题：保持视觉主导地位，适配整体风格 */
+/* 出版物标题：放大2px，保持层级 */
 div.title {
   color: #000000;
-  font-size: 14px; /* 比基准大二号，突出标题层级 */
+  font-size: 16px; /* 比基准大2px */
   font-weight: 600;
-  margin-bottom: 3px; /* 优化间距 */
-  font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif; /* 与强调文本字体统一 */
+  margin-bottom: 4px;
+  font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
 }
-/* 会议信息：与全局基准一致，协调正文风格 */
+/* 会议信息：同步基准字号 */
 div.conf {
-  font-size: 12px; /* 与全局基准字号一致 */
+  font-size: 14px;
   color: #000000;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
-/* 作者信息：比基准小一号，灰度风格保持一致 */
+/* 作者信息：比基准小1px */
 div.author {
-  font-size: 11px; /* 比基准小一号，区分辅助信息层级 */
+  font-size: 13px; /* 比基准小1px */
   color: #777777;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 div.author a:link,
 div.author a:visited {
@@ -86,74 +83,77 @@ div.author a:hover {
   color: #f09228;
   text-decoration: None;
 }
-/* 资料链接文本：与全局基准一致，匹配正文 */
+/* 资料链接文本：同步基准字号 */
 div.material {
   color: #000000;
-  font-size: 12px; /* 与全局基准字号一致 */
+  font-size: 14px;
   font-weight: 400;
 }
 
-/* --- 新的样式 --- */
-/* 针对整个新闻列表 */
+/* 新闻列表：同步字号 */
 ul.news-list {
-  /* 继承 body 的 font-size: 12px，保证了和其他模块（如Biography）的一致性 */
   list-style-type: disc;
-  padding-left: 20px;
-  margin: 10pt 0px;
-  line-height: 1.5; /* 统一行高 */
+  padding-left: 25px; /* 左内边距微调，适配大字体 */
+  margin: 12pt 0px;
+  line-height: 1.6;
 }
-
-/* 新闻列表中的每一项 */
 ul.news-list li {
-  margin: 4px 0; /* 增加列表项之间的垂直间距，提升可读性 */
+  margin: 5px 0;
 }
-
-/* 新闻日期 */
 span.news-date {
   color: #777777;
   font-style: italic;
-  margin-right: 6px;
-  /* 无需再设置 font-size，直接继承自 li，也就是 12px */
+  margin-right: 8px;
 }
 
-/* 新闻内容 */
-span.news-content {
-  color: #000000;
-  /* 无需再设置 font-size, font-family, line-height 等，全部继承自父元素 li 和 ul */
-}
-
-/* --- 企业图标样式（新增）--- */
-/* 图标容器：固定尺寸+居左+防止拉伸 */
+/* --- 企业图标样式（核心调整：固定宽度200px）--- */
 td.company-icon {
-  width: 33%; /* 保持原有列宽比例 */
-  height: 60px; /* 统一容器高度，避免不同图标高度混乱 */
-  display: flex; /* 弹性布局：控制图片对齐 */
-  align-items: center; /* 图片垂直居中（避免顶部/底部偏移） */
-  justify-content: flex-start; /* 图片居左（核心需求） */
-  overflow: hidden; /* 隐藏超出容器的部分，保持整洁 */
+  width: 200px; /* 固定宽度为200px，不再用百分比 */
+  height: auto; /* 高度自适应，跟随图片高度 */
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: flex-start; /* 居左 */
+  overflow: hidden;
+  padding: 5px 0; /* 上下内边距，避免拥挤 */
 }
-
-/* 图标图片：保持原始比例，不拉伸 */
+/* 图标图片：宽度填满容器，高度自适应 */
 td.company-icon img {
-  max-width: 100%; /* 图片最大宽度不超过容器 */
-  max-height: 80%; /* 图片最大高度为容器的80%（预留上下边距，避免拥挤） */
-  object-fit: contain; /* 核心属性：保持图片宽高比，空白处留空（不拉伸） */
+  width: 100%; /* 宽度=容器宽度200px */
+  height: auto; /* 高度自动，保持宽高比 */
+  object-fit: contain; /* 确保图片完整显示，不拉伸 */
 }
 
-/* --- 其他图片优化（新增）--- */
-/* 头像图片：居右+不拉伸 */
+/* 头像样式：保持比例，适配大字体布局 */
+td.avatar-cell {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end; /* 头像居右 */
+  align-items: center;
+}
 td.avatar-cell img {
-  width: 53%; /* 保持您原有头像尺寸比例 */
-  height: auto; /* 自动适应高度，防止拉伸 */
+  width: 60%; /* 头像宽度微调，适配大字体 */
+  height: auto;
   object-fit: contain;
-  display: block; /* 消除图片默认inline的空隙 */
-  margin-left: auto; /* 配合父容器td，实现头像居右 */
 }
 
-/* 论文图片：不拉伸+适配容器 */
+/* 论文图片样式：保持比例 */
+td.paper-img-cell {
+  width: 30%;
+}
 td.paper-img-cell img {
-  width: 100%; /* 填满父容器宽度 */
-  height: auto; /* 自动适应高度 */
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  display: block;
+  border-radius: 4px; /* 轻微圆角，提升美观度 */
+}
+
+/* 标签样式优化（出版物链接标签） */
+span.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 13px;
+  color: #555;
 }
