@@ -93,21 +93,31 @@ div.material {
   font-weight: 400;
 }
 
-/* 新闻日期：调整为与辅助信息协调，不干扰正文层级 */
-.news-date {
-  font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 12px; /* 关键修改：从11px改为12px，与Biography正文（全局基准）一致 */
-  color: #777777; /* 保持辅助信息灰度，区分日期与内容 */
-  font-style: italic; /* 保留斜体特性，维持日期辨识度 */
-  margin-right: 6px; /* 优化间距，提升阅读体验 */
-  font-weight: 400; /* 保持常规字重，避免视觉冲突 */
+/* --- 新的样式 --- */
+/* 针对整个新闻列表 */
+ul.news-list {
+  /* 继承 body 的 font-size: 12px，保证了和其他模块（如Biography）的一致性 */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10pt 0px;
+  line-height: 1.5; /* 统一行高 */
 }
 
-/* 新闻内容：完全匹配全局正文（Biography）样式，无差异化 */
-.news-content {
-  font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 12px; /* 与全局基准字号一致（Biography正文同此） */
-  color: #000000; /* 与Biography正文颜色完全统一 */
-  font-weight: 400;
-  line-height: 1.5; /* 同步全局行高，确保阅读节奏一致 */
+/* 新闻列表中的每一项 */
+ul.news-list li {
+  margin: 4px 0; /* 增加列表项之间的垂直间距，提升可读性 */
+}
+
+/* 新闻日期 */
+span.news-date {
+  color: #777777;
+  font-style: italic;
+  margin-right: 6px;
+  /* 无需再设置 font-size，直接继承自 li，也就是 12px */
+}
+
+/* 新闻内容 */
+span.news-content {
+  color: #000000;
+  /* 无需再设置 font-size, font-family, line-height 等，全部继承自父元素 li 和 ul */
 }
