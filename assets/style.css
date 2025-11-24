@@ -170,10 +170,11 @@ name {
 .avatar-fixed {
   position: absolute;
   top: 10px;     /* 根据需要调整 */
-  right: 440px;   /* 让头像贴到浏览器右边 */
+  right: 400px;   /* 让头像贴到浏览器右边 */
 }
 
 .avatar-fixed img {
-  max-width: 100px;
-  border-radius: 6px;
+  width: 100px !important;
+  max-width: 100px !important;
+  height: auto;
 }
