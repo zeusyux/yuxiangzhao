@@ -123,13 +123,13 @@ td.avatar-cell {
   padding-left: 25px; /* 增加与左侧文字的间距，避免挤压 */
 }
 td.avatar-cell img {
-  /* 核心修改：用max-width限制头像最大宽度，直接缩小尺寸 */
-  max-width: 180px; /* 头像最大宽度（可按需调整，如160px/200px），优先级高于width */
-  width: 100%; /* 备用：当图片本身小于max-width时，填充列宽 */
-  height: auto; /* 保持宽高比，避免拉伸变形 */
+  max-width: 250px; /* 显著缩小头像 */
+  width: auto;       /* 避免被放大 */
+  height: auto;
   object-fit: contain;
-  border-radius: 6px; /* 可选：保留圆角，增加美观度 */
+  border-radius: 6px;
 }
+
 
 /* --- 3. 论文图片样式（保持不变）--- */
 td.paper-img-cell {
