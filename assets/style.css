@@ -108,15 +108,15 @@ span.news-date {
   font-size: 16px; /* 同步基准，解决日期过小 */
 }
 
-/* --- 企业图标：固定宽度200px（按需求调整）--- */
+/* --- 企业图标：固定宽度200px + 关键调整：缩小上下间距 --- */
 td.company-icon {
-  width: 200px; /* 固定宽度200px，确保阿里/百度/美团图标尺寸统一 */
+  width: 200px; /* 固定宽度200px，确保图标尺寸统一 */
   height: auto; /* 高度自适应，避免图片拉伸 */
   display: flex;
   align-items: center; /* 垂直居中 */
   justify-content: flex-start; /* 图标居左 */
   overflow: hidden;
-  padding: 8px 0; /* 上下内边距，避免与文字拥挤 */
+  padding: 2px 0; /* 【核心修改】将上下内边距从8px缩至2px，减少空白 */
 }
 /* 企业图标图片：宽度填满200px容器，高度自适应 */
 td.company-icon img {
@@ -125,15 +125,16 @@ td.company-icon img {
   object-fit: contain; /* 确保图片不拉伸、不裁剪 */
 }
 
-/* 头像样式：适配大字体布局，保持比例 */
+/* --- 头像样式：关键调整：强制右对齐 + 优化宽度 --- */
 td.avatar-cell {
-  width: 22%; /* 微调宽度，避免与大字体个人信息拥挤 */
+  width: 28%; /* 【核心修改】加宽头像列宽度（从22%到28%），避免挤压 */
   display: flex;
-  justify-content: flex-end; /* 头像居右 */
-  align-items: center;
+  justify-content: flex-end; /* 强制头像居右对齐 */
+  align-items: flex-start; /* 【补充】顶部对齐，避免与个人信息垂直错位 */
+  padding-left: 20px; /* 【补充】增加左侧间距，与个人信息分隔更清晰 */
 }
 td.avatar-cell img {
-  width: 65%; /* 头像宽度微调，适配大字体布局 */
+  width: 85%; /* 【核心修改】放大头像显示比例（从65%到85%），填充右侧空间 */
   height: auto;
   object-fit: contain;
   border-radius: 6px; /* 轻微圆角，提升美观度 */
