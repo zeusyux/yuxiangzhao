@@ -121,9 +121,12 @@ td.avatar-cell {
   justify-content: flex-end; /* 强制头像右对齐（关键属性，必须保留） */
   align-items: flex-start; /* 与左侧个人信息顶部对齐，避免垂直错位 */
   padding-left: 25px; /* 增加与左侧文字的间距，避免挤压 */
+
+  text-align: right;     
+  float: right;
 }
 td.avatar-cell img {
-  max-width: 250px; /* 显著缩小头像 */
+  max-width: 400px; /* 显著缩小头像 */
   width: auto;       /* 避免被放大 */
   height: auto;
   object-fit: contain;
