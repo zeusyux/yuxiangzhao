@@ -1,4 +1,4 @@
-/* --- 全局字体放大：基准字号从14px提升至16px（核心调整）--- */
+/* --- 全局字体放大：基准字号从14px提升至16px --- */
 body,
 td,
 th,
@@ -6,11 +6,10 @@ tr,
 p,
 a {
   font-family: Helvetica, "Noto Sans SC", Arial, sans-serif;
-  font-size: 16px; /* 基准字号放大至16px，解决内容过小问题 */
-  line-height: 1.7; /* 行高同步优化，提升大字体可读性 */
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* 链接样式：保持过渡效果，适配大字体 */
 a,
 a:visited {
   color: #1772d0;
@@ -23,54 +22,47 @@ a:hover {
   text-decoration: none;
 }
 
-/* 强调文本：与新基准字号一致 */
 strong {
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 16px; /* 同步基准字号16px */
+  font-size: 16px;
   font-weight: 700;
 }
 
-/* 弱强调文本：比基准小1px，保持层级 */
 strongless {
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
-  font-size: 15px; /* 适配新基准，比16px小1px */
+  font-size: 15px;
   font-weight: 500;
 }
 
-/* 列表项：同步新基准字号 */
 li {
-  margin: 6px 0; /* 间距微调，适配大字体 */
-  font-size: 16px; /* 与基准一致，解决列表内容过小 */
+  margin: 6px 0;
+  font-size: 16px;
 }
 
-/* 高亮文本：保持样式，适配大字体 */
 span.highlight {
   background-color: #ffffd0;
-  padding: 1px 4px; /* 内边距微调，避免拥挤 */
+  padding: 1px 4px;
 }
 span.me {
   color: #000000;
   font-weight: 600;
-  font-size: 16px; /* 同步新基准 */
+  font-size: 16px;
 }
 
-/* 出版物标题：放大至18px，与内容字号保持层级 */
 div.title {
   color: #000000;
-  font-size: 18px; /* 比基准大2px，突出标题 */
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
   font-family: 'Lato', Helvetica, "Noto Sans SC", sans-serif;
 }
-/* 会议信息：同步新基准字号 */
 div.conf {
-  font-size: 16px; /* 解决会议信息过小 */
+  font-size: 16px;
   color: #000000;
   margin-bottom: 5px;
 }
-/* 作者信息：比基准小1px，保持层级 */
 div.author {
-  font-size: 15px; /* 适配新基准，解决作者信息过小 */
+  font-size: 15px;
   color: #777777;
   margin-bottom: 5px;
 }
@@ -84,93 +76,89 @@ div.author a:hover {
   color: #f09228;
   text-decoration: None;
 }
-/* 资料链接文本：同步新基准字号 */
 div.material {
   color: #000000;
-  font-size: 16px; /* 解决链接文本过小 */
+  font-size: 16px;
   font-weight: 400;
 }
 
-/* 新闻列表：同步新基准字号 */
 ul.news-list {
   list-style-type: disc;
-  padding-left: 28px; /* 左内边距微调，适配大字体 */
+  padding-left: 28px;
   margin: 14pt 0px;
   line-height: 1.7;
 }
 ul.news-list li {
-  margin: 6px 0; /* 间距微调 */
+  margin: 6px 0;
 }
 span.news-date {
   color: #777777;
   font-style: italic;
   margin-right: 10px;
-  font-size: 16px; /* 同步基准，解决日期过小 */
+  font-size: 16px;
 }
 
-/* --- 企业图标：固定宽度200px + 关键调整：缩小上下间距 --- */
+/* --- 1. 工作经历：缩小单位间空白（核心修改）--- */
 td.company-icon {
-  width: 200px; /* 固定宽度200px，确保图标尺寸统一 */
-  height: auto; /* 高度自适应，避免图片拉伸 */
+  width: 200px;
+  height: auto;
   display: flex;
-  align-items: center; /* 垂直居中 */
-  justify-content: flex-start; /* 图标居左 */
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 2px 0; /* 【核心修改】将上下内边距从8px缩至2px，减少空白 */
+  padding: 2px 0; /* 上下内边距从8px缩至2px，减少空白，与出版物间距对齐 */
 }
-/* 企业图标图片：宽度填满200px容器，高度自适应 */
 td.company-icon img {
-  width: 100%; /* 强制宽度=200px，符合需求 */
-  height: auto; /* 高度按比例自适应，保持图片完整性 */
-  object-fit: contain; /* 确保图片不拉伸、不裁剪 */
-}
-
-/* --- 头像样式：关键调整：强制右对齐 + 优化宽度 --- */
-td.avatar-cell {
-  width: 28%; /* 【核心修改】加宽头像列宽度（从22%到28%），避免挤压 */
-  display: flex;
-  justify-content: flex-end; /* 强制头像居右对齐 */
-  align-items: flex-start; /* 【补充】顶部对齐，避免与个人信息垂直错位 */
-  padding-left: 20px; /* 【补充】增加左侧间距，与个人信息分隔更清晰 */
-}
-td.avatar-cell img {
-  width: 85%; /* 【核心修改】放大头像显示比例（从65%到85%），填充右侧空间 */
+  width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 6px; /* 轻微圆角，提升美观度 */
 }
 
-/* 论文图片样式：保持比例，适配大字体 */
+/* --- 2. 头像：强制右对齐+控制尺寸（核心修改）--- */
+td.avatar-cell {
+  width: 30%; /* 加宽头像列（从22%→30%），给右对齐足够空间 */
+  display: flex;
+  justify-content: flex-end; /* 强制右对齐（关键属性） */
+  align-items: flex-start; /* 与个人信息顶部对齐，避免垂直错位 */
+  padding-left: 25px; /* 增加与左侧文字的间距，避免挤压 */
+}
+td.avatar-cell img {
+  width: 90%; /* 头像填充列宽（从65%→90%），但通过max-height限制大小 */
+  max-height: 220px; /* 强制最大高度，避免头像过大（可按需调整，如200px） */
+  height: auto; /* 保持宽高比，不拉伸变形 */
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* --- 3. 论文图片样式（保持不变）--- */
 td.paper-img-cell {
-  width: 32%; /* 微调宽度，避免与大字体论文信息拥挤 */
+  width: 32%;
 }
 td.paper-img-cell img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 4px; /* 轻微圆角 */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 新增轻微阴影，突出图片 */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* 标签样式优化（出版物链接标签）：适配大字体 */
 span.tag {
   display: inline-block;
-  padding: 3px 8px; /* 内边距微调，避免拥挤 */
+  padding: 3px 8px;
   background-color: #f0f0f0;
   border-radius: 4px;
   margin-right: 6px;
-  margin-bottom: 4px; /* 增加垂直间距，适配多标签换行 */
-  font-size: 14px; /* 比基准小2px，突出正文 */
+  margin-bottom: 4px;
+  font-size: 14px;
   color: #555;
   transition: background-color 0.2s ease;
 }
 span.tag:hover {
-  background-color: #e0e0e0; /* hover效果，提升交互感 */
+  background-color: #e0e0e0;
 }
 
-/* 个人信息标题（Yuxiang Zhao）：微调适配大字体 */
 name {
-  font-size: 28pt; /* 保持标题大小，与内容字号形成层级 */
+  font-size: 28pt;
   font-weight: 700;
   color: #222;
 }
