@@ -166,3 +166,14 @@ name {
   font-weight: 700;
   color: #222;
 }
+
+.avatar-fixed {
+  position: absolute;
+  top: 40px;     /* 根据需要调整 */
+  right: 40px;   /* 让头像贴到浏览器右边 */
+}
+
+.avatar-fixed img {
+  max-width: 150px;
+  border-radius: 6px;
+}
