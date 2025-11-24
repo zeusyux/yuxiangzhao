@@ -114,20 +114,21 @@ td.company-icon img {
   object-fit: contain;
 }
 
-/* --- 2. 头像：强制右对齐+控制尺寸（核心修改）--- */
+/* --- 2. 头像：缩小尺寸+强制右对齐（核心修改）--- */
 td.avatar-cell {
-  width: 30%; /* 加宽头像列（从22%→30%），给右对齐足够空间 */
+  width: 30%; /* 保持列宽，给右对齐足够空间 */
   display: flex;
-  justify-content: flex-end; /* 强制右对齐（关键属性） */
-  align-items: flex-start; /* 与个人信息顶部对齐，避免垂直错位 */
+  justify-content: flex-end; /* 强制头像右对齐（关键属性，必须保留） */
+  align-items: flex-start; /* 与左侧个人信息顶部对齐，避免垂直错位 */
   padding-left: 25px; /* 增加与左侧文字的间距，避免挤压 */
 }
 td.avatar-cell img {
-  width: 90%; /* 头像填充列宽（从65%→90%），但通过max-height限制大小 */
-  max-height: 220px; /* 强制最大高度，避免头像过大（可按需调整，如200px） */
-  height: auto; /* 保持宽高比，不拉伸变形 */
+  /* 核心修改：用max-width限制头像最大宽度，直接缩小尺寸 */
+  max-width: 180px; /* 头像最大宽度（可按需调整，如160px/200px），优先级高于width */
+  width: 100%; /* 备用：当图片本身小于max-width时，填充列宽 */
+  height: auto; /* 保持宽高比，避免拉伸变形 */
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 6px; /* 可选：保留圆角，增加美观度 */
 }
 
 /* --- 3. 论文图片样式（保持不变）--- */
