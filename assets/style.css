@@ -126,7 +126,7 @@ td.avatar-cell {
   float: right;
 }
 td.avatar-cell img {
-  max-width: 400px; /* 显著缩小头像 */
+  max-width: 300px; /* 显著缩小头像 */
   width: auto;       /* 避免被放大 */
   height: auto;
   object-fit: contain;
