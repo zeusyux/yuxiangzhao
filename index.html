@@ -2,183 +2,186 @@
     <head>
         <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/academicons-1.8.6/css/academicons.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/style.css"> <!-- 依赖外部CSS -->
         <link rel="icon" type="image/png" href="assets/figures/icon.png">
         <link rel="apple-touch-icon" type="image/png" href="assets/figures/icon.png">
         <title>Yuxiang Zhao's Homepage </title>
     </head>
     
-    <body><table border=0 width=1000px align=center><tr><td>
-    
-        <td valign="top">
-
-        <br>
-        <table style="font-size: 11pt;" border=0 width=100%>
+    <body>
+        <table border=0 width=1000px align=center>
             <tr>
-                <td> 
-                      <p style="text-align:left;font-size: 24pt;">
-                        <name>Yuxiang Zhao</name>
-                      </p>
-                      <p style="text-align:left;font-size: 12pt;">
-                        <font> 
-                            Computer Vision Researcher<br>
-                            Alibaba Group<br>
-                            E-mail &nbsp/&nbsp
-                            CV &nbsp/&nbsp
-                            Google Scholar &nbsp/&nbsp
-                            Github 
-                        </font>
-                      </p>
+                <td valign="top">
+                    <br>
+                    <!-- 个人信息+头像区域 -->
+                    <table style="font-size: 11pt;" border=0 width=100%>
+                        <tr>
+                            <td> 
+                                <p style="text-align:left;font-size: 24pt;">
+                                    <name>Yuxiang Zhao</name>
+                                </p>
+                                <p style="text-align:left;font-size: 12pt;">
+                                    Computer Vision Researcher<br>
+                                    Alibaba Group<br>
+                                    E-mail &nbsp/&nbsp
+                                    CV &nbsp/&nbsp
+                                    Google Scholar &nbsp/&nbsp
+                                    Github 
+                                </p>
+                            </td>
+                            <!-- 头像单元格：使用CSS中的.avatar-cell样式 -->
+                            <td width="20%" class="avatar-cell">
+                                <img src="assets/figures/avatar1.png" alt="Yuxiang Zhao">
+                            </td>
+                        </tr>
+                    </table> 
+
+                    <!-- 个人简介 -->
+                    <h2 style="font-size: 17pt;">Biography</h2>
+                    <p style="line-height:15pt; text-align: justify; margin:10pt 0px">
+                        I'm Yuxiang Zhao (赵煜翔), currently serving as a Computer Vision Researcher at Alibaba Group. My work here focuses on exploring the cutting-edge frontiers of Embodied Artificial Intelligence. Previously, I gained valuable research experience at Baidu, where my work centered on conditional anime generation—laying a solid foundation for my expertise in generative models and visual content creation.
+                    </p>
+                    <p style="line-height:15pt; text-align: justify; margin:10pt 0px">
+                        I graduated from Sun Yat-sen University in 2024, and my long-term research goal is to build scalable, multi-modal human-like intelligent agents. A key focus of my research lies in developing Large Motion Models capable of capturing, understanding, interacting with, and generating the motion dynamics of humans, animals, and the broader physical world.        
+                    </p>
+
+                    <!-- 新闻列表（样式已在CSS中定义） -->
+                    <h2 style="font-size: 17pt;">News</h2>
+                    <ul class="news-list"> 
+                        <li><span class="news-date">[09/2025]</span> <span class="news-content">We release a unified image/video editing/generation framework, EditVerse.</span></li>
+                        <li><span class="news-date">[06/2025]</span> <span class="news-content">FullDiT (a multi-task video generation model based on full-attention) is accepted to ICCV 2025, see you in Hawai'i!</span></li>
+                        <li><span class="news-date">[05/2025]</span> <span class="news-content">We are hosting the CVPR 2025 Workshop on Efficient and On-Device Generation (EDGE).</span></li>
+                        <li><span class="news-date">[04/2025]</span> <span class="news-content">Start an internship in Adobe Research with Soo Ye Kim and Zhe Lin.</span></li>
+                        <li><span class="news-date">[04/2025]</span> <span class="news-content">VideoPainter and Cobra are accepted to SIGGRAPH 2025.</span></li>
+                    </ul>
+
+                    <!-- 工作经历（图标使用CSS中的.company-icon样式） -->
+                    <h2 style="font-size: 17pt;">Working Experience</h2>
+                    <p style="margin:-20pt 0px;">
+                        <table style="border-collapse:separate; border-spacing:10px 30px;" cellspacing="8">
+                            <tbody>
+                                <!-- 阿里巴巴 -->
+                                <tr>
+                                    <td class="company-icon"> <!-- 应用图标容器样式 -->
+                                        <img src="assets/figures/alibaba.png" alt="Alibaba Group">
+                                    </td>
+                                    <td>
+                                        <div class="title">
+                                            Computer Vision Researcher, Alibaba Group
+                                        </div>
+                                        <div class="conf">
+                                            Topic: Embodied Artificial Intelligence
+                                        </div>
+                                        <div>
+                                            Supervised by: Yanqinq Zhu and Mu Xu
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- 百度 -->
+                                <tr>
+                                    <td class="company-icon"> <!-- 应用图标容器样式 -->
+                                        <img src="assets/figures/baidu.png" alt="Baidu">
+                                    </td>
+                                    <td>
+                                        <div class="title">
+                                            Computer Vision Researcher, Baidu
+                                        </div>
+                                        <div class="conf">
+                                            Topic: Conditional Cartoon Generation
+                                        </div>
+                                        <div>
+                                            Supervised by: Yicheng Zhao and Chenghui Liu
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- 美团 -->
+                                <tr>
+                                    <td class="company-icon"> <!-- 应用图标容器样式 -->
+                                        <img src="assets/figures/meituan.png" alt="Meituan">
+                                    </td>
+                                    <td>
+                                        <div class="title">
+                                            Computer Vision Researcher, Meituan
+                                        </div>
+                                        <div class="conf">
+                                            Topic: Image Caption Generation
+                                        </div>
+                                        <div>
+                                            Supervised by: Jiuchong Gao
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>        
+                        </table>
+                    </p>
+                    
+                    <!-- 精选出版物（论文图片优化） -->
+                    <h2 style="font-size: 17pt;">Selected Publications</h2>
+                    <p style="margin:-20pt 0px;">
+                        <table style="border-collapse:separate; border-spacing:0px 35px;" cellspacing="8">
+                            <tbody>
+                                <tr>
+                                    <td width="30%" class="paper-img-cell"> <!-- 应用论文图片样式 -->
+                                        <img src="assets/figures/editverse.png" alt="CoEvoer">
+                                    </td>
+                                    <td>
+                                        <div class="title">
+                                            CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation
+                                        </div>
+                                        <div class="author">
+                                            Yuxiang Zhao,
+                                            Wei Huang,
+                                            Yujie Song,
+                                            Liu Wang,
+                                            Huan Zhao.
+                                        </div>
+                                        <div class="conf">
+                                            The 40th Annual AAAI Conference on Artificial Intelligence (AAAI), 2026
+                                        </div>
+                                        <div class="material">
+                                            <span class="tag"> Project </span> /
+                                            <span class="tag"> arXiv </span> /
+                                            <span class="tag"> Code </span> /
+                                            <span class="tag"> Benchmark </span> /
+                                            <span class="tag"> Slides </span> / 
+                                            <span class="tag"> Full Comparison </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td width="30%" class="paper-img-cell"> <!-- 应用论文图片样式 -->
+                                        <img src="assets/figures/fulldit.png" alt="Cross Time Domain">
+                                    </td>
+                                    <td>
+                                        <div class="title">
+                                            Cross Time Domain Intention Interaction for Conditional Trajectory Prediction
+                                        </div>
+                                        <div class="author">
+                                            Yuxiang Zhao,
+                                            Wei Huang,
+                                            Haipeng Zeng,
+                                            Huan Zhao,
+                                            Yujie Song.
+                                        </div>
+                                        <div class="conf">
+                                            The 33rd ACM International Conference on Multimedia (ACMMM), 2025
+                                        </div>
+                                        <div class="material">
+                                            <span class="tag"> Project </span> /
+                                            <span class="tag"> arXiv </span> /
+                                            <span class="tag"> Video </span> /
+                                            <span class="tag"> Data </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>        
+                        </table>
+                    </p>
                 </td>
-                <td width = "20%">
-                    <img src="assets/figures/avatar1.png" style="width: 53%; height: auto;">
-                        </td>
             </tr>
-        </table> 
-
-        
-        <!-- <font face="helvetica, ariel, 'sans serif'">  -->
-        <h2 style="font-size: 17pt;">Biography</h2>
-        <p style="line-height:15pt; font-size: 12pt; text-align: justify; margin:10pt 0px">
-          I'm Yuxiang Zhao (赵煜翔), currently serving as a Computer Vision Researcher at Alibaba Group. My work here focuses on exploring the cutting-edge frontiers of Embodied Artificial Intelligence. Previously, I gained valuable research experience at Baidu, where my work centered on conditional anime generation—laying a solid foundation for my expertise in generative models and visual content creation.
-        <p style="line-height:15pt; font-size: 12pt; text-align: justify; margin:10pt 0px">
-          I graduated from Sun Yat-sen University in 2024, and my long-term research goal is to build scalable, multi-modal human-like intelligent agents. A key focus of my research lies in developing Large Motion Models capable of capturing, understanding, interacting with, and generating the motion dynamics of humans, animals, and the broader physical world.        </p>
-        <!-- </font>        -->
-
-        <h2 style="font-size: 17pt;">News</h2>
-        <!-- 移除了ul标签上的所有内联样式 -->
-        <ul class="news-list"> 
-          <li><span class="news-date">[09/2025]</span> <span class="news-content">We release a unified image/video editing/generation framework, EditVerse.</span></li>
-          <li><span class="news-date">[06/2025]</span> <span class="news-content">FullDiT (a multi-task video generation model based on full-attention) is accepted to ICCV 2025, see you in Hawai'i!</span></li>
-          <li><span class="news-date">[05/2025]</span> <span class="news-content">We are hosting the CVPR 2025 Workshop on Efficient and On-Device Generation (EDGE).</span></li>
-          <li><span class="news-date">[04/2025]</span> <span class="news-content">Start an internship in Adobe Research with Soo Ye Kim and Zhe Lin.</span></li>
-          <li><span class="news-date">[04/2025]</span> <span class="news-content">VideoPainter and Cobra are accepted to SIGGRAPH 2025.</span></li>
-        </ul>
-
-        <h2 style="font-size: 17pt;">Working Experience</h2>
-          <p style="margin:-20pt 0px; font-size: 12pt;">
-          <table style="border-collapse:separate; border-spacing:10px 30px;" cellspacing="8">
-          <tbody>
-
-            <tr>
-              <td width="33%">
-                <img width="200" height="55" src="assets/figures/alibaba.png">
-              </td>
-              <td>
-                <div class="title" style="font-size: 13pt;">
-                  Computer Vision Researcher, Alibaba Group
-                </div>
-                <div class="conf" style="font-size: 12pt;">
-                  Topic: Embodied Artificial Intelligence
-                </div>
-                <div style="font-size: 12pt;">
-                  Supervised by: Yanqinq Zhu and Mu Xu
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td width="33%">
-                <img width="200" height="80" src="assets/figures/baidu.png">
-              </td>
-              <td>
-                <div class="title" style="font-size: 13pt;">
-                  Computer Vision Researcher, Baidu
-                </div>
-                <div class="conf" style="font-size: 12pt;">
-                  Topic: Conditional Cartoon Generation
-                </div>
-                <div style="font-size: 12pt;">
-                  Supervised by: Yicheng Zhao and Chenghui Liu
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td width="33%">
-                <img width="200" height="100" src="assets/figures/meituan.png">
-              </td>
-              <td>
-                <div class="title" style="font-size: 13pt;">
-                  Computer Vision Researcher, Meituan
-                </div>
-                <div class="conf" style="font-size: 12pt;">
-                  Topic: Image Caption Generation
-                </div>
-                <div style="font-size: 12pt;">
-                  Supervised by: Jiuchong Gao
-                </div>
-              </td>
-            </tr>
-
-          </tbody>        
-          </table>
-        </p>
-        
-        <h2 style="font-size: 17pt;">Selected Publications</h2>
-        <p style="margin:-20pt 0px; font-size: 12pt;">
-          <table style="border-collapse:separate; border-spacing:0px 35px;" cellspacing="8">
-          <tbody>
-
-            <tr>
-              <td width="30%">
-                <img width="250" height="150" src="assets/figures/editverse.png">
-              </td>
-              <td>
-                <div class="title" style="font-size: 13pt;">
-                  CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation
-                </div>
-                <div class="author" style="font-size: 12pt;">
-                  Yuxiang Zhao,
-                  Wei Huang,
-                  Yujie Song,
-                  Liu Wang,
-                  Huan Zhao.
-                </div>
-                <div class="conf" style="font-size: 12pt;">
-                  The 40th Annual AAAI Conference on Artificial Intelligence (AAAI), 2026
-                </div>
-                <div style="font-size: 12pt;">
-                  <span class="tag"> Project </span> /
-                  <span class="tag"> arXiv </span> /
-                  <span class="tag"> Code </span> /
-                  <span class="tag"> Benchmark </span> /
-                  <span class="tag"> Slides </span> / 
-                  <span class="tag"> Full Comparison </span>
-                </div>
-              </td>
-            </tr>
-            
-
-            <tr>
-              <td width="30%">
-                <img width="250" height="130" src="assets/figures/fulldit.png">
-              </td>
-              <td>
-                <div class="title" style="font-size: 13pt;">
-                  Cross Time Domain Intention Interaction for Conditional Trajectory Prediction
-                </div>
-                <div class="author" style="font-size: 12pt;">
-                  Yuxiang Zhao,
-                  Wei Huang,
-                  Haipeng Zeng,
-                  Huan Zhao,
-                  Yujie Song.
-                </div>
-                <div class="conf" style="font-size: 12pt;">
-                  The 33rd ACM International Conference on Multimedia (ACMMM), 2025
-                </div>
-                <div style="font-size: 12pt;">
-                  <span class="tag"> Project </span> /
-                  <span class="tag"> arXiv </span> /
-                  <span class="tag"> Video </span> /
-                  <span class="tag"> Data </span>
-                </div>
-              </td>
-            </tr>
-
-          </tbody>        
-          </table>
-        </p>
-        </body>
+        </table>
+    </body>
 </html>
