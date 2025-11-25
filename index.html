@@ -104,71 +104,29 @@
                         </tbody>        
                     </table>
 
-                    <!-- 工作经历（修改后：与Selected Publications格式一致，左侧图片+右侧文字表格布局） -->
+                    <!-- 工作经历（已修改：黑点列表风格+左侧间距+统一行间距） -->
                     <h2 style="font-size: 20pt; margin-top: 50px; margin-bottom: 15px;">Working Experience</h2>
-                    <!-- 复用出版物的表格样式：border-spacing控制间距、width=100%占满容器 -->
-                    <table style="border-collapse:separate; border-spacing:20px 30px; width: 100%;">
-                        <tbody>
-                            <!-- 阿里巴巴经历 -->
-                            <tr>
-                                <!-- 左侧图片单元格：复用paper-img-cell类确保图片样式统一（尺寸/对齐） -->
-                                <td class="paper-img-cell">
-                                    <!-- 建议替换为阿里巴巴相关图标/工作场景图，此处用示例路径 -->
-                                    <img src="assets/figures/alibaba.png" alt="Alibaba Group">
-                                </td>
-                                <!-- 右侧文字单元格：保留原文字样式，结构与出版物一致 -->
-                                <td>
-                                    <div class="title"> <!-- 复用title类确保字体/权重统一 -->
-                                        Computer Vision Researcher, Alibaba Group
-                                    </div>
-                                    <div class="author"> <!-- 复用author类确保行高/间距统一 -->
-                                        Topic: Embodied Artificial Intelligence
-                                    </div>
-                                    <div class="conf"> <!-- 复用conf类确保颜色/字体统一 -->
-                                        Supervised by: Yanqinq Zhu and Mu Xu
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 百度经历 -->
-                            <tr>
-                                <td class="paper-img-cell">
-                                    <!-- 建议替换为百度相关图标/工作场景图，此处用示例路径 -->
-                                    <img src="assets/figures/baidu.png" alt="Baidu">
-                                </td>
-                                <td>
-                                    <div class="title">
-                                        Computer Vision Researcher, Baidu
-                                    </div>
-                                    <div class="author">
-                                        Topic: Conditional Cartoon Generation
-                                    </div>
-                                    <div class="conf">
-                                        Supervised by: Yicheng Zhao and Chenghui Liu
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 美团经历 -->
-                            <tr>
-                                <td class="paper-img-cell">
-                                    <!-- 建议替换为美团相关图标/工作场景图，此处用示例路径 -->
-                                    <img src="assets/figures/meituan.png" alt="Meituan">
-                                </td>
-                                <td>
-                                    <div class="title">
-                                        Computer Vision Researcher, Meituan
-                                    </div>
-                                    <div class="author">
-                                        Topic: Image Caption Generation
-                                    </div>
-                                    <div class="conf">
-                                        Supervised by: Jiuchong Gao
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- 与News保持一致的ul列表结构，通过padding-left增加左侧间距，line-height控制行高 -->
+                    <ul style="padding-left: 20px; line-height: 1.6; margin-top: 0;">
+                        <!-- 阿里巴巴 -->
+                        <li style="margin-bottom: 18px;"> <!-- 统一不同经历间的行间距 -->
+                            <div style="font-weight: bold; font-size: 16px; color: #000;">Computer Vision Researcher, Alibaba Group</div>
+                            <div style="color: #666; margin: 3px 0;">Topic: Embodied Artificial Intelligence</div>
+                            <div style="color: #888;">Supervised by: Yanqinq Zhu and Mu Xu</div>
+                        </li>
+                        <!-- 百度 -->
+                        <li style="margin-bottom: 18px;"> <!-- 统一不同经历间的行间距 -->
+                            <div style="font-weight: bold; font-size: 16px; color: #000;">Computer Vision Researcher, Baidu</div>
+                            <div style="color: #666; margin: 3px 0;">Topic: Conditional Cartoon Generation</div>
+                            <div style="color: #888;">Supervised by: Yicheng Zhao and Chenghui Liu</div>
+                        </li>
+                        <!-- 美团 -->
+                        <li> <!-- 最后一项无需底部间距，避免冗余 -->
+                            <div style="font-weight: bold; font-size: 16px; color: #000;">Computer Vision Researcher, Meituan</div>
+                            <div style="color: #666; margin: 3px 0;">Topic: Image Caption Generation</div>
+                            <div style="color: #888;">Supervised by: Jiuchong Gao</div>
+                        </li>
+                    </ul>
                 </td>
             </tr>
         </table>
