@@ -169,7 +169,7 @@ name {
 
 .avatar-fixed {
   position: absolute;
-  top: 50px;     /* 根据需要调整 */
+  top: 70px;     /* 根据需要调整 */
   right: 390px;   /* 让头像贴到浏览器右边 */
 }
 
