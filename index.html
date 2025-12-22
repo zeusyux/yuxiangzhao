@@ -88,14 +88,28 @@
                 margin: 0; /* 移除表格顶部margin，由标题的margin-bottom控制间距 */
             }
 
-            /* 论文图片单元格样式 */
+            /* 论文图片单元格样式 - 新增：固定裁剪容器尺寸 */
             td.paper-img-cell {
                 width: 32%;
+                /* 核心：设置裁剪容器的固定宽高 */
+                width: 200px;
+                height: 100px;
+                /* 裁剪溢出部分 */
+                overflow: hidden;
+                /* 居中对齐 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
+            /* 论文图片样式 - 核心裁剪设置 */
             td.paper-img-cell img {
-                width: 100%;
-                height: auto;
-                object-fit: contain;
+                /* 强制覆盖原有尺寸，固定为200x100 */
+                width: 200px !important;
+                height: 100px !important;
+                /* 裁剪模式：cover（保持比例填充容器，裁剪溢出）| contain（保持比例适应容器，无裁剪） */
+                object-fit: cover;
+                /* 裁剪对齐点（可调整：center/top/bottom/left/right） */
+                object-position: center;
                 border-radius: 4px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             }
@@ -212,7 +226,7 @@
     
     <body>
         <!-- 加宽页面容器：从 1000px 改为 1200px -->
-        <table border=0 width=1000px align=center>
+        <table border=0 width=1200px align=center>
             <tr>
                 <td valign="top">
                     <br>
