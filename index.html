@@ -92,8 +92,8 @@
             td.paper-img-cell {
                 width: 32%;
                 /* 核心：设置裁剪容器的固定宽高 */
-                width: 220px;
-                height: 120px;
+                width: 256px;
+                height: 192px;
                 /* 裁剪溢出部分 */
                 overflow: hidden;
                 /* 居中对齐 */
@@ -104,12 +104,12 @@
             /* 论文图片样式 - 核心裁剪设置 */
             td.paper-img-cell img {
                 /* 强制覆盖原有尺寸，固定为200x100 */
-                width: 250px !important;
-                height: 196px !important;
+                width: 256px !important;
+                height: 192px !important;
                 /* 裁剪模式：cover（保持比例填充容器，裁剪溢出）| contain（保持比例适应容器，无裁剪） */
                 object-fit: cover;
                 /* 裁剪对齐点（可调整：center/top/bottom/left/right） */
-                object-position: center 15%; 
+                object-position: center 10%; 
                 border-radius: 4px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             }
